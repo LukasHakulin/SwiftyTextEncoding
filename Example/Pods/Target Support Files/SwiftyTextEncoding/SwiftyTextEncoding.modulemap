@@ -1,0 +1,6 @@
+framework module SwiftyTextEncoding {
+  umbrella header "SwiftyTextEncoding-umbrella.h"
+
+  export *
+  module * { export * }
+}

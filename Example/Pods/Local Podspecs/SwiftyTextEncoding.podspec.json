@@ -1,0 +1,22 @@
+{
+  "name": "SwiftyTextEncoding",
+  "version": "0.1.0",
+  "summary": "A short description of SwiftyTextEncoding.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Lukas Hakulin/SwiftyTextEncoding",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Lukas Hakulin": "lukas.hakulin@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/LukasHakulin/SwiftyTextEncoding.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "SwiftyTextEncoding/Classes/**/*"
+}

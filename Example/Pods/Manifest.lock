@@ -1,0 +1,16 @@
+PODS:
+  - SwiftyTextEncoding (0.1.0)
+
+DEPENDENCIES:
+  - SwiftyTextEncoding (from `../`)
+
+EXTERNAL SOURCES:
+  SwiftyTextEncoding:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SwiftyTextEncoding: 290144b900334a1100017816942bfbb3c4690fec
+
+PODFILE CHECKSUM: 7fe2fd1c2849b2bc66cd187f80a90b6b76d7c428
+
+COCOAPODS: 1.9.3
