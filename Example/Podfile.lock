@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  SwiftyTextEncoding: 290144b900334a1100017816942bfbb3c4690fec
+  SwiftyTextEncoding: c3e17d11b11af9d5b1650afba2cce60e3e5c517f
 
 PODFILE CHECKSUM: 7fe2fd1c2849b2bc66cd187f80a90b6b76d7c428
 

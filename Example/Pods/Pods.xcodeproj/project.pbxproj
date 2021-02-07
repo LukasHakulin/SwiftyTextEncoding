@@ -8,15 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		01A81A3D03F123278D6B40F3916C63D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		01C54274FE33ABA63ED0D971E362DC4A /* SwiftyTextEncoding-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 19CFD7149F7638A42117E301F6408E80 /* SwiftyTextEncoding-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		078182FFE71009C24B88B9A375ADF5BC /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39DDB7978C86E80D9A994D070B0763B /* ReplaceMe.swift */; };
+		4A2F91AA01BF95016BCC8583B6DA252B /* Base16EncoderAndDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4FB1C78681B12437484A156D87CB1C /* Base16EncoderAndDecoder.swift */; };
 		545468F939F14F5A5035465AAADDAED4 /* Pods-SwiftyTextEncoding_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C18A836E77EB131AE03CE2B7CDF62664 /* Pods-SwiftyTextEncoding_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6466F724ED1CB97E03D19A51A7A24AFD /* Pods-SwiftyTextEncoding_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FC636A19062CF838CFD8B96635C3765 /* Pods-SwiftyTextEncoding_Example-dummy.m */; };
 		681B6B2690A47B5B22AD551A3A9CC25B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		7923CC374FA1D9BEDF8F1D0C116927BB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		B8F244B988FD0DD7C4AAAC8CAD22196D /* AuxiliaryDataTypeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5A04A960C27ECDA6B279ECA9FFD7C4 /* AuxiliaryDataTypeExtensions.swift */; };
 		D249B1149569CEC1D7F7F43CF3DBC90A /* Pods-SwiftyTextEncoding_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = ADA36AAA6A6353650AD896D18A79F83C /* Pods-SwiftyTextEncoding_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D5A1263B0B02B53B92798330D9EEA074 /* SwiftyTextEncoding-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E29B1D3013FA8786630BC60B2EDA8A1 /* SwiftyTextEncoding-dummy.m */; };
+		D3D6512225D0354400494869 /* CodingAlphabets.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D6512125D0354400494869 /* CodingAlphabets.swift */; };
+		D4917E0C4AEF17D06D3E4E464F323A1C /* SwiftyTextEncoding-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0083226B7D5E2232FDB2F5A5A9B1B247 /* SwiftyTextEncoding-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DDB18BD9643359B5E2E6DCE76CF1C1D3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		E5DF72BBD067CD086888F1A69DF08528 /* Pods-SwiftyTextEncoding_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0C309B027FFD189941AF54C92D30ED /* Pods-SwiftyTextEncoding_Tests-dummy.m */; };
+		E61C450DFEBE2E5A4210F637EE9DFD00 /* SwiftyTextEncoding-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E4F6207F892A936DC0D1E735E674C3FC /* SwiftyTextEncoding-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,23 +39,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0083226B7D5E2232FDB2F5A5A9B1B247 /* SwiftyTextEncoding-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyTextEncoding-umbrella.h"; sourceTree = "<group>"; };
 		04CD333C2DE8AC38F6035EDE7F4CEFDE /* Pods-SwiftyTextEncoding_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwiftyTextEncoding_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		086E81198B3FC1B2D6231A946BF87E18 /* SwiftyTextEncoding.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = SwiftyTextEncoding.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		0DAEE58A96E782D95BF373F012CE56C5 /* Pods-SwiftyTextEncoding_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SwiftyTextEncoding_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		0E4FB1C78681B12437484A156D87CB1C /* Base16EncoderAndDecoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Base16EncoderAndDecoder.swift; path = SwiftyTextEncoding/Classes/Base16EncoderAndDecoder.swift; sourceTree = "<group>"; };
 		0EBEB3518871E4532EBA3C7715D92A52 /* Pods-SwiftyTextEncoding_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftyTextEncoding_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		129903C957F042BDAFBCA554CB48F9FC /* SwiftyTextEncoding.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyTextEncoding.debug.xcconfig; sourceTree = "<group>"; };
 		149F274D14883225206FDE5AFE8714A5 /* Pods-SwiftyTextEncoding_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftyTextEncoding_Example.release.xcconfig"; sourceTree = "<group>"; };
-		19CFD7149F7638A42117E301F6408E80 /* SwiftyTextEncoding-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyTextEncoding-umbrella.h"; sourceTree = "<group>"; };
 		1A328EFB3A9803DD284F75A91CB2AE3C /* Pods_SwiftyTextEncoding_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftyTextEncoding_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1C0181E89183B227516D7685A89EED96 /* SwiftyTextEncoding-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyTextEncoding-prefix.pch"; sourceTree = "<group>"; };
+		1A3D9CDB33B8E0D8FA5CAD8229E2A177 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		1B5A04A960C27ECDA6B279ECA9FFD7C4 /* AuxiliaryDataTypeExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AuxiliaryDataTypeExtensions.swift; path = SwiftyTextEncoding/Classes/AuxiliaryDataTypeExtensions.swift; sourceTree = "<group>"; };
 		31E43CEC92C3F58B9AE20F16FA938973 /* Pods-SwiftyTextEncoding_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwiftyTextEncoding_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		3450A5CA6007093D7DF490F3F6595DE9 /* Pods-SwiftyTextEncoding_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwiftyTextEncoding_Tests-Info.plist"; sourceTree = "<group>"; };
+		365D0B8A0676ED3A3D5BDC7380F827F3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		5FC636A19062CF838CFD8B96635C3765 /* Pods-SwiftyTextEncoding_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SwiftyTextEncoding_Example-dummy.m"; sourceTree = "<group>"; };
 		6F4BE08982133EB8EFF79E48BC9FB4FB /* Pods-SwiftyTextEncoding_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SwiftyTextEncoding_Example.modulemap"; sourceTree = "<group>"; };
 		7427F87ECF80C1A2B9FBF443AF6E6BE3 /* Pods-SwiftyTextEncoding_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftyTextEncoding_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		7454AFC63E7AD664C0E819B58286EBFA /* SwiftyTextEncoding-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftyTextEncoding-Info.plist"; sourceTree = "<group>"; };
 		7AD7C844EDCF0649F47A5C23CBD49991 /* Pods-SwiftyTextEncoding_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftyTextEncoding_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		8E29B1D3013FA8786630BC60B2EDA8A1 /* SwiftyTextEncoding-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyTextEncoding-dummy.m"; sourceTree = "<group>"; };
+		9412E8362D0B0A5AAF3C648CE0E47E59 /* SwiftyTextEncoding.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftyTextEncoding.modulemap; sourceTree = "<group>"; };
 		97F62F5381AF30883073B0A607284B2D /* Pods-SwiftyTextEncoding_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SwiftyTextEncoding_Tests.modulemap"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		ADA36AAA6A6353650AD896D18A79F83C /* Pods-SwiftyTextEncoding_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SwiftyTextEncoding_Tests-umbrella.h"; sourceTree = "<group>"; };
@@ -61,26 +65,18 @@
 		C0BAAFD61E8C7A847636ADE0B958F71B /* Pods_SwiftyTextEncoding_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftyTextEncoding_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C18A836E77EB131AE03CE2B7CDF62664 /* Pods-SwiftyTextEncoding_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SwiftyTextEncoding_Example-umbrella.h"; sourceTree = "<group>"; };
 		C33A2DF7C77C40D318AE5A553C8163C9 /* SwiftyTextEncoding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyTextEncoding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C7A8BE530197B56AC0958C4003283A6C /* SwiftyTextEncoding.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyTextEncoding.release.xcconfig; sourceTree = "<group>"; };
-		D34CA788D5AB825B7F63620354651D3C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		D39DDB7978C86E80D9A994D070B0763B /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = SwiftyTextEncoding/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
+		CCD6A8E78D90C448DEFAB245FA7C42EE /* SwiftyTextEncoding.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyTextEncoding.release.xcconfig; sourceTree = "<group>"; };
+		D3D6512125D0354400494869 /* CodingAlphabets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CodingAlphabets.swift; path = SwiftyTextEncoding/Classes/CodingAlphabets.swift; sourceTree = "<group>"; };
 		D62F7E883C9D0A5A47EA7D03D1B3A5DB /* Pods-SwiftyTextEncoding_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftyTextEncoding_Example-frameworks.sh"; sourceTree = "<group>"; };
-		DCE1CBDBC8245CA125ADD238ECF1A7A7 /* SwiftyTextEncoding.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyTextEncoding.debug.xcconfig; sourceTree = "<group>"; };
+		DAF8B050BB4E7E2CA719CD4BC4384AAA /* SwiftyTextEncoding.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = SwiftyTextEncoding.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		DE0C309B027FFD189941AF54C92D30ED /* Pods-SwiftyTextEncoding_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SwiftyTextEncoding_Tests-dummy.m"; sourceTree = "<group>"; };
-		EC54049ADA4CE9A3E5BF702F9364AF98 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		F5D1B833AC57E058505C4D72DCC1DD6A /* SwiftyTextEncoding.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftyTextEncoding.modulemap; sourceTree = "<group>"; };
+		E4F6207F892A936DC0D1E735E674C3FC /* SwiftyTextEncoding-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyTextEncoding-dummy.m"; sourceTree = "<group>"; };
+		F3220913D81AC13310E302ED852EF174 /* SwiftyTextEncoding-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyTextEncoding-prefix.pch"; sourceTree = "<group>"; };
+		F3801FBF81D8B6952BDB34BE34E0913A /* SwiftyTextEncoding-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftyTextEncoding-Info.plist"; sourceTree = "<group>"; };
 		FCB3CA0B8D09417FF615B8A8355852D2 /* Pods-SwiftyTextEncoding_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SwiftyTextEncoding_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3798F9163DE5F105193C50E0AAEDD31E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7923CC374FA1D9BEDF8F1D0C116927BB /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		52801C3B5DE17A7740331CDD49BC18D8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -97,6 +93,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D7FE8CEE481532B858E2211ED685EE2F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDB18BD9643359B5E2E6DCE76CF1C1D3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -107,6 +111,14 @@
 				3B40AB89059880280F9F9B73FFF58D72 /* Pods-SwiftyTextEncoding_Tests */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		1479AF779A5DED5164E860575239B3B7 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FCB29776B499EF5A3206AEC5E596252D /* SwiftyTextEncoding */,
+			);
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		3B40AB89059880280F9F9B73FFF58D72 /* Pods-SwiftyTextEncoding_Tests */ = {
@@ -125,27 +137,14 @@
 			path = "Target Support Files/Pods-SwiftyTextEncoding_Tests";
 			sourceTree = "<group>";
 		};
-		67158C3FCD140558E710A4EA47E9B4B5 /* Support Files */ = {
+		841A07DAAF337A8B2183B46D315C1FD4 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				F5D1B833AC57E058505C4D72DCC1DD6A /* SwiftyTextEncoding.modulemap */,
-				8E29B1D3013FA8786630BC60B2EDA8A1 /* SwiftyTextEncoding-dummy.m */,
-				7454AFC63E7AD664C0E819B58286EBFA /* SwiftyTextEncoding-Info.plist */,
-				1C0181E89183B227516D7685A89EED96 /* SwiftyTextEncoding-prefix.pch */,
-				19CFD7149F7638A42117E301F6408E80 /* SwiftyTextEncoding-umbrella.h */,
-				DCE1CBDBC8245CA125ADD238ECF1A7A7 /* SwiftyTextEncoding.debug.xcconfig */,
-				C7A8BE530197B56AC0958C4003283A6C /* SwiftyTextEncoding.release.xcconfig */,
+				1A3D9CDB33B8E0D8FA5CAD8229E2A177 /* LICENSE */,
+				365D0B8A0676ED3A3D5BDC7380F827F3 /* README.md */,
+				DAF8B050BB4E7E2CA719CD4BC4384AAA /* SwiftyTextEncoding.podspec */,
 			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/SwiftyTextEncoding";
-			sourceTree = "<group>";
-		};
-		8810B014E9EBF11589B42F07A7E15CF0 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				FE008C6963E637E33CC42ED5BA9F993F /* SwiftyTextEncoding */,
-			);
-			name = "Development Pods";
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		9607E8D101A90142DF7AC5920F13E11C /* Products */ = {
@@ -156,6 +155,21 @@
 				C33A2DF7C77C40D318AE5A553C8163C9 /* SwiftyTextEncoding.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		A543383D4886B81DD27456C724B27830 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9412E8362D0B0A5AAF3C648CE0E47E59 /* SwiftyTextEncoding.modulemap */,
+				E4F6207F892A936DC0D1E735E674C3FC /* SwiftyTextEncoding-dummy.m */,
+				F3801FBF81D8B6952BDB34BE34E0913A /* SwiftyTextEncoding-Info.plist */,
+				F3220913D81AC13310E302ED852EF174 /* SwiftyTextEncoding-prefix.pch */,
+				0083226B7D5E2232FDB2F5A5A9B1B247 /* SwiftyTextEncoding-umbrella.h */,
+				129903C957F042BDAFBCA554CB48F9FC /* SwiftyTextEncoding.debug.xcconfig */,
+				CCD6A8E78D90C448DEFAB245FA7C42EE /* SwiftyTextEncoding.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/SwiftyTextEncoding";
 			sourceTree = "<group>";
 		};
 		BFD1218425B3D97CD4638BEC971204CC /* Pods-SwiftyTextEncoding_Example */ = {
@@ -183,21 +197,11 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		C845A1D11E3A3E017059FBD094408952 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				EC54049ADA4CE9A3E5BF702F9364AF98 /* LICENSE */,
-				D34CA788D5AB825B7F63620354651D3C /* README.md */,
-				086E81198B3FC1B2D6231A946BF87E18 /* SwiftyTextEncoding.podspec */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				8810B014E9EBF11589B42F07A7E15CF0 /* Development Pods */,
+				1479AF779A5DED5164E860575239B3B7 /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
 				9607E8D101A90142DF7AC5920F13E11C /* Products */,
 				061687C9C0C1DB360603F58C08DC751E /* Targets Support Files */,
@@ -212,12 +216,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		FE008C6963E637E33CC42ED5BA9F993F /* SwiftyTextEncoding */ = {
+		FCB29776B499EF5A3206AEC5E596252D /* SwiftyTextEncoding */ = {
 			isa = PBXGroup;
 			children = (
-				D39DDB7978C86E80D9A994D070B0763B /* ReplaceMe.swift */,
-				C845A1D11E3A3E017059FBD094408952 /* Pod */,
-				67158C3FCD140558E710A4EA47E9B4B5 /* Support Files */,
+				D3D6512125D0354400494869 /* CodingAlphabets.swift */,
+				1B5A04A960C27ECDA6B279ECA9FFD7C4 /* AuxiliaryDataTypeExtensions.swift */,
+				0E4FB1C78681B12437484A156D87CB1C /* Base16EncoderAndDecoder.swift */,
+				841A07DAAF337A8B2183B46D315C1FD4 /* Pod */,
+				A543383D4886B81DD27456C724B27830 /* Support Files */,
 			);
 			name = SwiftyTextEncoding;
 			path = ../..;
@@ -234,19 +240,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C82648F0BEB197CF568742A2D68E7E71 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4917E0C4AEF17D06D3E4E464F323A1C /* SwiftyTextEncoding-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E0E17014D0C9DFDB139984E18B0D1F39 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				D249B1149569CEC1D7F7F43CF3DBC90A /* Pods-SwiftyTextEncoding_Tests-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FB06CB31F15180A92511AB713ED9142C /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				01C54274FE33ABA63ED0D971E362DC4A /* SwiftyTextEncoding-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,12 +280,12 @@
 		};
 		D9B827A1D19C6A44CFAB4D65BD04C88C /* SwiftyTextEncoding */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F7FB2A3A92CA6764A0C4EFC54862A779 /* Build configuration list for PBXNativeTarget "SwiftyTextEncoding" */;
+			buildConfigurationList = 3635E1489CCF0740639037A79B6ED4AE /* Build configuration list for PBXNativeTarget "SwiftyTextEncoding" */;
 			buildPhases = (
-				FB06CB31F15180A92511AB713ED9142C /* Headers */,
-				47A844DF5B58A7EA1B96B5A931AF4A72 /* Sources */,
-				3798F9163DE5F105193C50E0AAEDD31E /* Frameworks */,
-				2821B79818203F39143112F8ECF5E4AD /* Resources */,
+				C82648F0BEB197CF568742A2D68E7E71 /* Headers */,
+				2E61E7CECF3C7FADE3CB6361E9777A1C /* Sources */,
+				D7FE8CEE481532B858E2211ED685EE2F /* Frameworks */,
+				AD18EE8C88D7978E2E52F696A21E9346 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -316,12 +322,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1220;
-				TargetAttributes = {
-					D9B827A1D19C6A44CFAB4D65BD04C88C = {
-						LastSwiftMigration = 1220;
-					};
-				};
+				LastUpgradeCheck = 1100;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -351,14 +352,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2821B79818203F39143112F8ECF5E4AD /* Resources */ = {
+		5ABE607F7A5CA70F349F71DD8D51A7D8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5ABE607F7A5CA70F349F71DD8D51A7D8 /* Resources */ = {
+		AD18EE8C88D7978E2E52F696A21E9346 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -368,12 +369,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		47A844DF5B58A7EA1B96B5A931AF4A72 /* Sources */ = {
+		2E61E7CECF3C7FADE3CB6361E9777A1C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				078182FFE71009C24B88B9A375ADF5BC /* ReplaceMe.swift in Sources */,
-				D5A1263B0B02B53B92798330D9EEA074 /* SwiftyTextEncoding-dummy.m in Sources */,
+				D3D6512225D0354400494869 /* CodingAlphabets.swift in Sources */,
+				B8F244B988FD0DD7C4AAAC8CAD22196D /* AuxiliaryDataTypeExtensions.swift in Sources */,
+				4A2F91AA01BF95016BCC8583B6DA252B /* Base16EncoderAndDecoder.swift in Sources */,
+				E61C450DFEBE2E5A4210F637EE9DFD00 /* SwiftyTextEncoding-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,7 +430,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-SwiftyTextEncoding_Example/Pods-SwiftyTextEncoding_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-SwiftyTextEncoding_Example/Pods-SwiftyTextEncoding_Example.modulemap";
@@ -461,7 +464,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-SwiftyTextEncoding_Tests/Pods-SwiftyTextEncoding_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-SwiftyTextEncoding_Tests/Pods-SwiftyTextEncoding_Tests.modulemap";
@@ -495,7 +498,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-SwiftyTextEncoding_Tests/Pods-SwiftyTextEncoding_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-SwiftyTextEncoding_Tests/Pods-SwiftyTextEncoding_Tests.modulemap";
@@ -511,6 +514,38 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		60EA4945FD218C4559BBA3444F1DC9D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CCD6A8E78D90C448DEFAB245FA7C42EE /* SwiftyTextEncoding.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyTextEncoding/SwiftyTextEncoding-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyTextEncoding/SwiftyTextEncoding-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftyTextEncoding/SwiftyTextEncoding.modulemap";
+				PRODUCT_MODULE_NAME = SwiftyTextEncoding;
+				PRODUCT_NAME = SwiftyTextEncoding;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		8F17DC3A99F99FBAD606CE6963886315 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -538,7 +573,6 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -561,7 +595,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -598,7 +632,6 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -624,7 +657,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -637,9 +670,9 @@
 			};
 			name = Debug;
 		};
-		BEDC189BE4FFE2349B6824A679D23411 /* Debug */ = {
+		A7AD9704044A933B79E5ABAD702DE30F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DCE1CBDBC8245CA125ADD238ECF1A7A7 /* SwiftyTextEncoding.debug.xcconfig */;
+			baseConfigurationReference = 129903C957F042BDAFBCA554CB48F9FC /* SwiftyTextEncoding.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -653,7 +686,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/SwiftyTextEncoding/SwiftyTextEncoding-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/SwiftyTextEncoding/SwiftyTextEncoding-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/SwiftyTextEncoding/SwiftyTextEncoding.modulemap";
 				PRODUCT_MODULE_NAME = SwiftyTextEncoding;
@@ -684,7 +717,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-SwiftyTextEncoding_Example/Pods-SwiftyTextEncoding_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-SwiftyTextEncoding_Example/Pods-SwiftyTextEncoding_Example.modulemap";
@@ -701,38 +734,6 @@
 			};
 			name = Debug;
 		};
-		DBA829260AA508F3A4D6FAC16DE00C1E /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C7A8BE530197B56AC0958C4003283A6C /* SwiftyTextEncoding.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftyTextEncoding/SwiftyTextEncoding-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftyTextEncoding/SwiftyTextEncoding-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SwiftyTextEncoding/SwiftyTextEncoding.modulemap";
-				PRODUCT_MODULE_NAME = SwiftyTextEncoding;
-				PRODUCT_NAME = SwiftyTextEncoding;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -741,6 +742,15 @@
 			buildConfigurations = (
 				40A898CE3B674C55A3B3C23F8DEAC367 /* Debug */,
 				14D52E719C9F11B8AE64D9376E71FE76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3635E1489CCF0740639037A79B6ED4AE /* Build configuration list for PBXNativeTarget "SwiftyTextEncoding" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7AD9704044A933B79E5ABAD702DE30F /* Debug */,
+				60EA4945FD218C4559BBA3444F1DC9D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -759,15 +769,6 @@
 			buildConfigurations = (
 				C6FC0A1C84DDA4D874DFA7277D1702ED /* Debug */,
 				03EF0F1C5C9B7338768FCBCC1C5DBA50 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F7FB2A3A92CA6764A0C4EFC54862A779 /* Build configuration list for PBXNativeTarget "SwiftyTextEncoding" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BEDC189BE4FFE2349B6824A679D23411 /* Debug */,
-				DBA829260AA508F3A4D6FAC16DE00C1E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
