@@ -15,6 +15,7 @@
 		B8F244B988FD0DD7C4AAAC8CAD22196D /* AuxiliaryDataTypeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5A04A960C27ECDA6B279ECA9FFD7C4 /* AuxiliaryDataTypeExtensions.swift */; };
 		D249B1149569CEC1D7F7F43CF3DBC90A /* Pods-SwiftyTextEncoding_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = ADA36AAA6A6353650AD896D18A79F83C /* Pods-SwiftyTextEncoding_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D3D6512225D0354400494869 /* CodingAlphabets.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D6512125D0354400494869 /* CodingAlphabets.swift */; };
+		D3D6512F25D03AE100494869 /* Base32EncoderAndDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D6512E25D03AE100494869 /* Base32EncoderAndDecoder.swift */; };
 		D4917E0C4AEF17D06D3E4E464F323A1C /* SwiftyTextEncoding-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0083226B7D5E2232FDB2F5A5A9B1B247 /* SwiftyTextEncoding-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DDB18BD9643359B5E2E6DCE76CF1C1D3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		E5DF72BBD067CD086888F1A69DF08528 /* Pods-SwiftyTextEncoding_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0C309B027FFD189941AF54C92D30ED /* Pods-SwiftyTextEncoding_Tests-dummy.m */; };
@@ -67,6 +68,7 @@
 		C33A2DF7C77C40D318AE5A553C8163C9 /* SwiftyTextEncoding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyTextEncoding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCD6A8E78D90C448DEFAB245FA7C42EE /* SwiftyTextEncoding.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyTextEncoding.release.xcconfig; sourceTree = "<group>"; };
 		D3D6512125D0354400494869 /* CodingAlphabets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CodingAlphabets.swift; path = SwiftyTextEncoding/Classes/CodingAlphabets.swift; sourceTree = "<group>"; };
+		D3D6512E25D03AE100494869 /* Base32EncoderAndDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Base32EncoderAndDecoder.swift; path = SwiftyTextEncoding/Classes/Base32EncoderAndDecoder.swift; sourceTree = "<group>"; };
 		D62F7E883C9D0A5A47EA7D03D1B3A5DB /* Pods-SwiftyTextEncoding_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftyTextEncoding_Example-frameworks.sh"; sourceTree = "<group>"; };
 		DAF8B050BB4E7E2CA719CD4BC4384AAA /* SwiftyTextEncoding.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = SwiftyTextEncoding.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		DE0C309B027FFD189941AF54C92D30ED /* Pods-SwiftyTextEncoding_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SwiftyTextEncoding_Tests-dummy.m"; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 				0E4FB1C78681B12437484A156D87CB1C /* Base16EncoderAndDecoder.swift */,
 				841A07DAAF337A8B2183B46D315C1FD4 /* Pod */,
 				A543383D4886B81DD27456C724B27830 /* Support Files */,
+				D3D6512E25D03AE100494869 /* Base32EncoderAndDecoder.swift */,
 			);
 			name = SwiftyTextEncoding;
 			path = ../..;
@@ -322,7 +325,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1220;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -374,6 +377,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3D6512225D0354400494869 /* CodingAlphabets.swift in Sources */,
+				D3D6512F25D03AE100494869 /* Base32EncoderAndDecoder.swift in Sources */,
 				B8F244B988FD0DD7C4AAAC8CAD22196D /* AuxiliaryDataTypeExtensions.swift in Sources */,
 				4A2F91AA01BF95016BCC8583B6DA252B /* Base16EncoderAndDecoder.swift in Sources */,
 				E61C450DFEBE2E5A4210F637EE9DFD00 /* SwiftyTextEncoding-dummy.m in Sources */,
@@ -430,7 +434,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-SwiftyTextEncoding_Example/Pods-SwiftyTextEncoding_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-SwiftyTextEncoding_Example/Pods-SwiftyTextEncoding_Example.modulemap";
@@ -464,7 +468,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-SwiftyTextEncoding_Tests/Pods-SwiftyTextEncoding_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-SwiftyTextEncoding_Tests/Pods-SwiftyTextEncoding_Tests.modulemap";
@@ -498,7 +502,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-SwiftyTextEncoding_Tests/Pods-SwiftyTextEncoding_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-SwiftyTextEncoding_Tests/Pods-SwiftyTextEncoding_Tests.modulemap";
@@ -531,7 +535,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/SwiftyTextEncoding/SwiftyTextEncoding-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/SwiftyTextEncoding/SwiftyTextEncoding-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/SwiftyTextEncoding/SwiftyTextEncoding.modulemap";
 				PRODUCT_MODULE_NAME = SwiftyTextEncoding;
@@ -573,6 +577,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -595,7 +600,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -632,6 +637,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -657,7 +663,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -686,7 +692,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/SwiftyTextEncoding/SwiftyTextEncoding-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/SwiftyTextEncoding/SwiftyTextEncoding-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/SwiftyTextEncoding/SwiftyTextEncoding.modulemap";
 				PRODUCT_MODULE_NAME = SwiftyTextEncoding;
@@ -717,7 +723,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-SwiftyTextEncoding_Example/Pods-SwiftyTextEncoding_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-SwiftyTextEncoding_Example/Pods-SwiftyTextEncoding_Example.modulemap";

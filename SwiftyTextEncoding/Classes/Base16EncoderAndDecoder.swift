@@ -30,6 +30,7 @@ public func encodeToBase16(_ input: String) -> String? {
 // MARK: Decode
 
 public func decodeFromBase16(_ input: String) -> String? {
+    guard isBase16StringValid(input) == true else { return nil }
     var base16encodedString = input.bytes
     var result: [UInt8] = []
     while base16encodedString.count > 0 {
@@ -54,4 +55,11 @@ public func decodeFromBase16(_ input: String) -> Data? {
 
 public func decodeFromBase16(_ input: String) -> [UInt8]? {
     return decodeFromBase16(input)?.bytes
+}
+
+// Auxiliary
+
+func isBase16StringValid(_ input: String) -> Bool {
+    guard input.range(of: #"^[A-F0-9]*$"#, options: .regularExpression) != nil else { return false }
+    return true
 }
