@@ -17,30 +17,36 @@ let validPaddingLength: [Int] = [1, 3, 4, 6]
 
 // Interface
 
+public enum Base32DecodingError: Swift.Error, Equatable {
+    case noBase32Alphabet
+    case unsuportedFormat
+    case unexpectedInternalError
+}
+
 public enum Base32Alphabet {
     case base32, extendedHexBase32, zBase32
 }
 
-public func encodeToBase32(_ input: [UInt8], alphabet: Base32Alphabet = .base32) -> String? {
+public func encodeToBase32(_ input: [UInt8], alphabet: Base32Alphabet = .base32) throws -> String? {
     switch alphabet {
-    case .base32: return encodeToBase32(input, alphabet: base32Alphabet)
-    case .extendedHexBase32: return encodeToBase32(input, alphabet: extendedHexBase32Alphabet)
-    case .zBase32: return encodeToBase32(input, alphabet: zBase32Alphabet)
+    case .base32: return try encodeToBase32(input, alphabet: base32Alphabet)
+    case .extendedHexBase32: return try encodeToBase32(input, alphabet: extendedHexBase32Alphabet)
+    case .zBase32: return try encodeToBase32(input, alphabet: zBase32Alphabet)
     }
 }
 
-public func encodeToBase32(_ input: Data, alphabet: Base32Alphabet = .base32) -> String? {
-    encodeToBase32(input.bytes, alphabet: alphabet)
+public func encodeToBase32(_ input: Data, alphabet: Base32Alphabet = .base32) throws -> String? {
+    try encodeToBase32(input.bytes, alphabet: alphabet)
 }
 
-public func encodeToBase32(_ input: String, alphabet: Base32Alphabet = .base32) -> String? {
-    encodeToBase32(input.bytes, alphabet: alphabet)
+public func encodeToBase32(_ input: String, alphabet: Base32Alphabet = .base32) throws -> String? {
+    try encodeToBase32(input.bytes, alphabet: alphabet)
 }
 
 // Implementation
 
-func encodeToBase32(_ input: [UInt8], alphabet: [String]) -> String? {
-    guard alphabet.count == 32 else { fatalError("No Base32 alphabet") }
+func encodeToBase32(_ input: [UInt8], alphabet: [String]) throws -> String? {
+    guard alphabet.count == 32 else { throw Base32DecodingError.noBase32Alphabet }
     var inputSequence: [UInt8] = input
     var result: [String] = []
     // encode blocks of 5 bytes
@@ -92,53 +98,53 @@ func encodeToBase32(_ input: [UInt8], alphabet: [String]) -> String? {
     return result.joined()
 }
 
-func encodeToBase32(_ input: Data, alphabet: [String]) -> String? {
-    encodeToBase32(input.bytes, alphabet: alphabet)
+func encodeToBase32(_ input: Data, alphabet: [String]) throws -> String? {
+    try encodeToBase32(input.bytes, alphabet: alphabet)
 }
 
-func encodeToBase32(_ input: String, alphabet: [String]) -> String? {
-    encodeToBase32(input.bytes, alphabet: alphabet)
+func encodeToBase32(_ input: String, alphabet: [String]) throws -> String? {
+    try encodeToBase32(input.bytes, alphabet: alphabet)
 }
 
 // MARK: Decode
 
 // Interface
 
-public func decodeFromBase32(_ input: String, alphabet: Base32Alphabet) -> String? {
+public func decodeFromBase32(_ input: String, alphabet: Base32Alphabet) throws -> String {
     let inputString = convert(input: input, padding: numberOfLettersInBase32Group, paddingCharacter: pad)
-    guard isStringValid(inputString, alphabet: alphabet) == true else { return nil }
+    guard isStringValid(inputString, alphabet: alphabet) == true else { throw Base32DecodingError.unsuportedFormat }
 
     switch alphabet {
-    case .base32: return decodeFromBase32(inputString, alphabet: base32Alphabet)
-    case .extendedHexBase32: return decodeFromBase32(inputString, alphabet: extendedHexBase32Alphabet)
-    case .zBase32: return decodeFromBase32(inputString, alphabet: zBase32Alphabet)
+    case .base32: return try decodeFromBase32(inputString, alphabet: base32Alphabet)
+    case .extendedHexBase32: return try decodeFromBase32(inputString, alphabet: extendedHexBase32Alphabet)
+    case .zBase32: return try decodeFromBase32(inputString, alphabet: zBase32Alphabet)
     }
 }
 
-public func decodeFromBase32(_ input: String, alphabet: Base32Alphabet) -> Data? {
-    decodeFromBase32(input, alphabet: alphabet)?.data
+public func decodeFromBase32(_ input: String, alphabet: Base32Alphabet) throws -> Data {
+    try decodeFromBase32(input, alphabet: alphabet).data
 }
 
-public func decodeFromBase32(_ input: String, alphabet: Base32Alphabet) -> [UInt8]? {
-    decodeFromBase32(input, alphabet: alphabet)?.bytes
+public func decodeFromBase32(_ input: String, alphabet: Base32Alphabet) throws -> [UInt8] {
+    try decodeFromBase32(input, alphabet: alphabet).bytes
 }
 
 // Implementation
 
-func decodeFromBase32(_ input: String, alphabet: [String]) -> String? {
+func decodeFromBase32(_ input: String, alphabet: [String]) throws -> String {
     guard input.isEmpty == false else { return "" }
-    guard alphabet.count == 32 else { fatalError("No Base32 alphabet") }
+    guard alphabet.count == 32 else { throw Base32DecodingError.noBase32Alphabet }
     let inputString = convert(input: input, padding: numberOfLettersInBase32Group, paddingCharacter: pad)
 
     var base32encodedString = inputString.bytes
-    guard base32encodedString.count > 0 else { return nil }
+    guard base32encodedString.count > 0 else { throw Base32DecodingError.unexpectedInternalError }
 
     // calc padding length
     var leastPaddingLength = 0
     if let index = pad.bytes.first, let firstIndexOfPad = base32encodedString.firstIndex(of: index) {
         leastPaddingLength = base32encodedString.suffix(from: firstIndexOfPad).count
         guard validPaddingLength.contains(leastPaddingLength) == true
-        else { fatalError("Unsuported format - undefined number of pad value!") }
+        else { throw Base32DecodingError.unsuportedFormat }
     }
     base32encodedString = Array(base32encodedString.dropLast(leastPaddingLength))
 
@@ -150,7 +156,7 @@ func decodeFromBase32(_ input: String, alphabet: [String]) -> String? {
                 let byte = base32encodedString.popOrNil(),
                 let letter = byte.utf8String,
                 let indexOfLetter = alphabet.firstIndex(of: letter)
-            else { return nil }
+            else { throw Base32DecodingError.unexpectedInternalError }
             first8Letters.append(UInt8(indexOfLetter))
         }
 
@@ -167,7 +173,7 @@ func decodeFromBase32(_ input: String, alphabet: [String]) -> String? {
             let byte = base32encodedString.popOrNil(),
             let letter = byte.utf8String,
             let indexOfLetter = alphabet.firstIndex(of: letter)
-        else { return nil }
+        else { throw Base32DecodingError.unexpectedInternalError }
         restOfLetters.append(UInt8(indexOfLetter))
     }
 
@@ -189,15 +195,16 @@ func decodeFromBase32(_ input: String, alphabet: [String]) -> String? {
     default: break
     }
 
-    return result.utf8String
+    guard let resultString = result.utf8String else { throw Base32DecodingError.unexpectedInternalError }
+    return resultString
 }
 
-func decodeFromBase32(_ input: String, alphabet: [String]) -> Data? {
-    decodeFromBase32(input, alphabet: alphabet)?.data
+func decodeFromBase32(_ input: String, alphabet: [String]) throws -> Data {
+    try decodeFromBase32(input, alphabet: alphabet).data
 }
 
-func decodeFromBase32(_ input: String, alphabet: [String]) -> [UInt8]? {
-    decodeFromBase32(input, alphabet: alphabet)?.bytes
+func decodeFromBase32(_ input: String, alphabet: [String]) throws -> [UInt8] {
+    try decodeFromBase32(input, alphabet: alphabet).bytes
 }
 
 // Auxiliary

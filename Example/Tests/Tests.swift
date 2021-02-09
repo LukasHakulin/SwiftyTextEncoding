@@ -59,93 +59,93 @@ class Tests: XCTestCase {
      * BASE32("foobar") = "MZXW6YTBOI======"
      */
     func test_base32Encoding_base32Alphabet() {
-        XCTAssertEqual(encodeToBase32("", alphabet: .base32), "")
-        XCTAssertEqual(encodeToBase32("f", alphabet: .base32), "MY======")
-        XCTAssertEqual(encodeToBase32("fo", alphabet: .base32), "MZXQ====")
-        XCTAssertEqual(encodeToBase32("foo", alphabet: .base32), "MZXW6===")
-        XCTAssertEqual(encodeToBase32("foob", alphabet: .base32), "MZXW6YQ=")
-        XCTAssertEqual(encodeToBase32("fooba", alphabet: .base32), "MZXW6YTB")
-        XCTAssertEqual(encodeToBase32("foobar", alphabet: .base32), "MZXW6YTBOI======")
+        XCTAssertEqual(try encodeToBase32("", alphabet: .base32), "")
+        XCTAssertEqual(try encodeToBase32("f", alphabet: .base32), "MY======")
+        XCTAssertEqual(try encodeToBase32("fo", alphabet: .base32), "MZXQ====")
+        XCTAssertEqual(try encodeToBase32("foo", alphabet: .base32), "MZXW6===")
+        XCTAssertEqual(try encodeToBase32("foob", alphabet: .base32), "MZXW6YQ=")
+        XCTAssertEqual(try encodeToBase32("fooba", alphabet: .base32), "MZXW6YTB")
+        XCTAssertEqual(try encodeToBase32("foobar", alphabet: .base32), "MZXW6YTBOI======")
     }
 
     func test_base32Encoding_extendedHexBase32Alphabet() {
-        XCTAssertEqual(encodeToBase32("", alphabet: .extendedHexBase32), "")
-        XCTAssertEqual(encodeToBase32("f", alphabet: .extendedHexBase32), "CO======")
-        XCTAssertEqual(encodeToBase32("fo", alphabet: .extendedHexBase32), "CPNG====")
-        XCTAssertEqual(encodeToBase32("foo", alphabet: .extendedHexBase32), "CPNMU===")
-        XCTAssertEqual(encodeToBase32("foob", alphabet: .extendedHexBase32), "CPNMUOG=")
-        XCTAssertEqual(encodeToBase32("fooba", alphabet: .extendedHexBase32), "CPNMUOJ1")
-        XCTAssertEqual(encodeToBase32("foobar", alphabet: .extendedHexBase32), "CPNMUOJ1E8======")
+        XCTAssertEqual(try encodeToBase32("", alphabet: .extendedHexBase32), "")
+        XCTAssertEqual(try encodeToBase32("f", alphabet: .extendedHexBase32), "CO======")
+        XCTAssertEqual(try encodeToBase32("fo", alphabet: .extendedHexBase32), "CPNG====")
+        XCTAssertEqual(try encodeToBase32("foo", alphabet: .extendedHexBase32), "CPNMU===")
+        XCTAssertEqual(try encodeToBase32("foob", alphabet: .extendedHexBase32), "CPNMUOG=")
+        XCTAssertEqual(try encodeToBase32("fooba", alphabet: .extendedHexBase32), "CPNMUOJ1")
+        XCTAssertEqual(try encodeToBase32("foobar", alphabet: .extendedHexBase32), "CPNMUOJ1E8======")
     }
 
     func test_base32Encoding_zBase32Alphabet() {
-        XCTAssertEqual(encodeToBase32("", alphabet: .zBase32), "")
-        XCTAssertEqual(encodeToBase32("f", alphabet: .zBase32), "ca======")
-        XCTAssertEqual(encodeToBase32("fo", alphabet: .zBase32), "c3zo====")
-        XCTAssertEqual(encodeToBase32("foo", alphabet: .zBase32), "c3zs6===")
-        XCTAssertEqual(encodeToBase32("foob", alphabet: .zBase32), "c3zs6ao=")
-        XCTAssertEqual(encodeToBase32("fooba", alphabet: .zBase32), "c3zs6aub")
-        XCTAssertEqual(encodeToBase32("foobar", alphabet: .zBase32), "c3zs6aubqe======")
+        XCTAssertEqual(try encodeToBase32("", alphabet: .zBase32), "")
+        XCTAssertEqual(try encodeToBase32("f", alphabet: .zBase32), "ca======")
+        XCTAssertEqual(try encodeToBase32("fo", alphabet: .zBase32), "c3zo====")
+        XCTAssertEqual(try encodeToBase32("foo", alphabet: .zBase32), "c3zs6===")
+        XCTAssertEqual(try encodeToBase32("foob", alphabet: .zBase32), "c3zs6ao=")
+        XCTAssertEqual(try encodeToBase32("fooba", alphabet: .zBase32), "c3zs6aub")
+        XCTAssertEqual(try encodeToBase32("foobar", alphabet: .zBase32), "c3zs6aubqe======")
     }
 
     func test_base32Decoding_base32Alphabet_withPadding() {
-        XCTAssertEqual(decodeFromBase32("", alphabet: .base32), "")
-        XCTAssertEqual(decodeFromBase32("MY======", alphabet: .base32), "f")
-        XCTAssertEqual(decodeFromBase32("MZXQ====", alphabet: .base32), "fo")
-        XCTAssertEqual(decodeFromBase32("MZXW6===", alphabet: .base32), "foo")
-        XCTAssertEqual(decodeFromBase32("MZXW6YQ=", alphabet: .base32), "foob")
-        XCTAssertEqual(decodeFromBase32("MZXW6YTB", alphabet: .base32), "fooba")
-        XCTAssertEqual(decodeFromBase32("MZXW6YTBOI======", alphabet: .base32), "foobar")
+        XCTAssertEqual(try decodeFromBase32("", alphabet: .base32), "")
+        XCTAssertEqual(try decodeFromBase32("MY======", alphabet: .base32), "f")
+        XCTAssertEqual(try decodeFromBase32("MZXQ====", alphabet: .base32), "fo")
+        XCTAssertEqual(try decodeFromBase32("MZXW6===", alphabet: .base32), "foo")
+        XCTAssertEqual(try decodeFromBase32("MZXW6YQ=", alphabet: .base32), "foob")
+        XCTAssertEqual(try decodeFromBase32("MZXW6YTB", alphabet: .base32), "fooba")
+        XCTAssertEqual(try decodeFromBase32("MZXW6YTBOI======", alphabet: .base32), "foobar")
     }
 
     func test_base32Decoding_base32Alphabet_noPadding() {
-        XCTAssertEqual(decodeFromBase32("", alphabet: .base32), "")
-        XCTAssertEqual(decodeFromBase32("MY", alphabet: .base32), "f")
-        XCTAssertEqual(decodeFromBase32("MZXQ", alphabet: .base32), "fo")
-        XCTAssertEqual(decodeFromBase32("MZXW6", alphabet: .base32), "foo")
-        XCTAssertEqual(decodeFromBase32("MZXW6YQ", alphabet: .base32), "foob")
-        XCTAssertEqual(decodeFromBase32("MZXW6YTB", alphabet: .base32), "fooba")
-        XCTAssertEqual(decodeFromBase32("MZXW6YTBOI", alphabet: .base32), "foobar")
+        XCTAssertEqual(try decodeFromBase32("", alphabet: .base32), "")
+        XCTAssertEqual(try decodeFromBase32("MY", alphabet: .base32), "f")
+        XCTAssertEqual(try decodeFromBase32("MZXQ", alphabet: .base32), "fo")
+        XCTAssertEqual(try decodeFromBase32("MZXW6", alphabet: .base32), "foo")
+        XCTAssertEqual(try decodeFromBase32("MZXW6YQ", alphabet: .base32), "foob")
+        XCTAssertEqual(try decodeFromBase32("MZXW6YTB", alphabet: .base32), "fooba")
+        XCTAssertEqual(try decodeFromBase32("MZXW6YTBOI", alphabet: .base32), "foobar")
     }
 
     func test_base32Decoding_extendedHexBase32Alphabet_withPadding() {
-        XCTAssertEqual(decodeFromBase32("", alphabet: .extendedHexBase32), "")
-        XCTAssertEqual(decodeFromBase32("CO======", alphabet: .extendedHexBase32), "f")
-        XCTAssertEqual(decodeFromBase32("CPNG====", alphabet: .extendedHexBase32), "fo")
-        XCTAssertEqual(decodeFromBase32("CPNMU===", alphabet: .extendedHexBase32), "foo")
-        XCTAssertEqual(decodeFromBase32("CPNMUOG=", alphabet: .extendedHexBase32), "foob")
-        XCTAssertEqual(decodeFromBase32("CPNMUOJ1", alphabet: .extendedHexBase32), "fooba")
-        XCTAssertEqual(decodeFromBase32("CPNMUOJ1E8======", alphabet: .extendedHexBase32), "foobar")
+        XCTAssertEqual(try decodeFromBase32("", alphabet: .extendedHexBase32), "")
+        XCTAssertEqual(try decodeFromBase32("CO======", alphabet: .extendedHexBase32), "f")
+        XCTAssertEqual(try decodeFromBase32("CPNG====", alphabet: .extendedHexBase32), "fo")
+        XCTAssertEqual(try decodeFromBase32("CPNMU===", alphabet: .extendedHexBase32), "foo")
+        XCTAssertEqual(try decodeFromBase32("CPNMUOG=", alphabet: .extendedHexBase32), "foob")
+        XCTAssertEqual(try decodeFromBase32("CPNMUOJ1", alphabet: .extendedHexBase32), "fooba")
+        XCTAssertEqual(try decodeFromBase32("CPNMUOJ1E8======", alphabet: .extendedHexBase32), "foobar")
     }
 
     func test_base32Decoding_extendedHexBase32Alphabet_noPadding() {
-        XCTAssertEqual(decodeFromBase32("", alphabet: .extendedHexBase32), "")
-        XCTAssertEqual(decodeFromBase32("CO", alphabet: .extendedHexBase32), "f")
-        XCTAssertEqual(decodeFromBase32("CPNG", alphabet: .extendedHexBase32), "fo")
-        XCTAssertEqual(decodeFromBase32("CPNMU", alphabet: .extendedHexBase32), "foo")
-        XCTAssertEqual(decodeFromBase32("CPNMUOG", alphabet: .extendedHexBase32), "foob")
-        XCTAssertEqual(decodeFromBase32("CPNMUOJ1", alphabet: .extendedHexBase32), "fooba")
-        XCTAssertEqual(decodeFromBase32("CPNMUOJ1E8", alphabet: .extendedHexBase32), "foobar")
+        XCTAssertEqual(try decodeFromBase32("", alphabet: .extendedHexBase32), "")
+        XCTAssertEqual(try decodeFromBase32("CO", alphabet: .extendedHexBase32), "f")
+        XCTAssertEqual(try decodeFromBase32("CPNG", alphabet: .extendedHexBase32), "fo")
+        XCTAssertEqual(try decodeFromBase32("CPNMU", alphabet: .extendedHexBase32), "foo")
+        XCTAssertEqual(try decodeFromBase32("CPNMUOG", alphabet: .extendedHexBase32), "foob")
+        XCTAssertEqual(try decodeFromBase32("CPNMUOJ1", alphabet: .extendedHexBase32), "fooba")
+        XCTAssertEqual(try decodeFromBase32("CPNMUOJ1E8", alphabet: .extendedHexBase32), "foobar")
     }
 
     func test_base32Decoding_zBase32Alphabet_withPadding() {
-        XCTAssertEqual(decodeFromBase32("", alphabet: .zBase32), "")
-        XCTAssertEqual(decodeFromBase32("ca======", alphabet: .zBase32), "f")
-        XCTAssertEqual(decodeFromBase32("c3zo====", alphabet: .zBase32), "fo")
-        XCTAssertEqual(decodeFromBase32("c3zs6===", alphabet: .zBase32), "foo")
-        XCTAssertEqual(decodeFromBase32("c3zs6ao=", alphabet: .zBase32), "foob")
-        XCTAssertEqual(decodeFromBase32("c3zs6aub", alphabet: .zBase32), "fooba")
-        XCTAssertEqual(decodeFromBase32("c3zs6aubqe======", alphabet: .zBase32), "foobar")
+        XCTAssertEqual(try decodeFromBase32("", alphabet: .zBase32), "")
+        XCTAssertEqual(try decodeFromBase32("ca======", alphabet: .zBase32), "f")
+        XCTAssertEqual(try decodeFromBase32("c3zo====", alphabet: .zBase32), "fo")
+        XCTAssertEqual(try decodeFromBase32("c3zs6===", alphabet: .zBase32), "foo")
+        XCTAssertEqual(try decodeFromBase32("c3zs6ao=", alphabet: .zBase32), "foob")
+        XCTAssertEqual(try decodeFromBase32("c3zs6aub", alphabet: .zBase32), "fooba")
+        XCTAssertEqual(try decodeFromBase32("c3zs6aubqe======", alphabet: .zBase32), "foobar")
     }
 
     func test_base32Decoding_zBase32Alphabet_noPadding() {
-        XCTAssertEqual(decodeFromBase32("", alphabet: .zBase32), "")
-        XCTAssertEqual(decodeFromBase32("ca", alphabet: .zBase32), "f")
-        XCTAssertEqual(decodeFromBase32("c3zo", alphabet: .zBase32), "fo")
-        XCTAssertEqual(decodeFromBase32("c3zs6", alphabet: .zBase32), "foo")
-        XCTAssertEqual(decodeFromBase32("c3zs6ao", alphabet: .zBase32), "foob")
-        XCTAssertEqual(decodeFromBase32("c3zs6aub", alphabet: .zBase32), "fooba")
-        XCTAssertEqual(decodeFromBase32("c3zs6aubqe", alphabet: .zBase32), "foobar")
+        XCTAssertEqual(try decodeFromBase32("", alphabet: .zBase32), "")
+        XCTAssertEqual(try decodeFromBase32("ca", alphabet: .zBase32), "f")
+        XCTAssertEqual(try decodeFromBase32("c3zo", alphabet: .zBase32), "fo")
+        XCTAssertEqual(try decodeFromBase32("c3zs6", alphabet: .zBase32), "foo")
+        XCTAssertEqual(try decodeFromBase32("c3zs6ao", alphabet: .zBase32), "foob")
+        XCTAssertEqual(try decodeFromBase32("c3zs6aub", alphabet: .zBase32), "fooba")
+        XCTAssertEqual(try decodeFromBase32("c3zs6aubqe", alphabet: .zBase32), "foobar")
     }
 
     // MARK: - Valiation
@@ -202,6 +202,105 @@ class Tests: XCTestCase {
         XCTAssertFalse(isStringValid("aaaaaa=", alphabet: .zBase32))
     }
 
+    // MARK: - Throwing
+    func test_isThrowingError_wrongAlphabet_base32Decoding_base32Alphabet() {
+        XCTAssertThrowsError(
+            try decodeFromBase32String("0A======", alphabet: .base32),
+            expectedError: Base32DecodingError.unsuportedFormat
+        )
+        XCTAssertThrowsError(
+            try decodeFromBase32String("1A======", alphabet: .base32),
+            expectedError: Base32DecodingError.unsuportedFormat
+        )
+        XCTAssertThrowsError(
+            try decodeFromBase32String("8A======", alphabet: .base32),
+            expectedError: Base32DecodingError.unsuportedFormat
+        )
+        XCTAssertThrowsError(
+            try decodeFromBase32String("9A======", alphabet: .base32),
+            expectedError: Base32DecodingError.unsuportedFormat
+        )
+    }
+
+    func test_isThrowingError_wrongPadding_base32Decoding_base32Alphabet() {
+        XCTAssertThrowsError(
+            try decodeFromBase32String("A======", alphabet: .base32),
+            expectedError: Base32DecodingError.unsuportedFormat
+        )
+        XCTAssertThrowsError(
+            try decodeFromBase32String("AAA====", alphabet: .base32),
+            expectedError: Base32DecodingError.unsuportedFormat
+        )
+        XCTAssertThrowsError(
+            try decodeFromBase32String("AAAAAA=", alphabet: .base32),
+            expectedError: Base32DecodingError.unsuportedFormat
+        )
+    }
+
+    func test_isThrowingError_wrongAlphabet_base32Decoding_extendedHexBase32Alphabet() {
+        XCTAssertThrowsError(
+            try decodeFromBase32String("WA======", alphabet: .extendedHexBase32),
+            expectedError: Base32DecodingError.unsuportedFormat
+        )
+        XCTAssertThrowsError(
+            try decodeFromBase32String("XA======", alphabet: .extendedHexBase32),
+            expectedError: Base32DecodingError.unsuportedFormat
+        )
+        XCTAssertThrowsError(
+            try decodeFromBase32String("YA======", alphabet: .extendedHexBase32),
+            expectedError: Base32DecodingError.unsuportedFormat
+        )
+        XCTAssertThrowsError(
+            try decodeFromBase32String("ZA======", alphabet: .extendedHexBase32),
+            expectedError: Base32DecodingError.unsuportedFormat
+        )
+    }
+
+    func test_isThrowingError_wrongPadding_base32Decoding_extendedHexBase32Alphabet() {
+        XCTAssertThrowsError(
+            try decodeFromBase32String("A======", alphabet: .extendedHexBase32),
+            expectedError: Base32DecodingError.unsuportedFormat
+        )
+        XCTAssertThrowsError(
+            try decodeFromBase32String("AAA====", alphabet: .extendedHexBase32),
+            expectedError: Base32DecodingError.unsuportedFormat
+        )
+        XCTAssertThrowsError(
+            try decodeFromBase32String("AAAAAA=", alphabet: .extendedHexBase32),
+            expectedError: Base32DecodingError.unsuportedFormat
+        )
+    }
+
+    func test_isThrowingError_wrongAlphabet_base32Decoding_zBase32Alphabet() {
+        XCTAssertThrowsError(
+            try decodeFromBase32String("la======", alphabet: .zBase32),
+            expectedError: Base32DecodingError.unsuportedFormat
+        )
+        XCTAssertThrowsError(
+            try decodeFromBase32String("va======", alphabet: .zBase32),
+            expectedError: Base32DecodingError.unsuportedFormat
+        )
+        XCTAssertThrowsError(
+            try decodeFromBase32String("2a======", alphabet: .zBase32),
+            expectedError: Base32DecodingError.unsuportedFormat
+        )
+    }
+
+    func test_isThrowingError_wrongPadding_base32Decoding_zBase32Alphabet() {
+        XCTAssertThrowsError(
+            try decodeFromBase32String("a======", alphabet: .zBase32),
+            expectedError: Base32DecodingError.unsuportedFormat
+        )
+        XCTAssertThrowsError(
+            try decodeFromBase32String("aaa====", alphabet: .zBase32),
+            expectedError: Base32DecodingError.unsuportedFormat
+        )
+        XCTAssertThrowsError(
+            try decodeFromBase32String("aaaaaa=", alphabet: .zBase32),
+            expectedError: Base32DecodingError.unsuportedFormat
+        )
+    }
+
     // MARK: - Performance
     func test_performance_base16Encoding() {
         measure() {
@@ -211,19 +310,37 @@ class Tests: XCTestCase {
 
     func test_performance_base32Encoding() {
         measure() {
-            _ = encodeToBase32(text, alphabet: .base32)
+            _ = try? encodeToBase32(text, alphabet: .base32)
         }
     }
 
     func test_performance_base32HexEncoding() {
         measure() {
-            _ = encodeToBase32(text, alphabet: .extendedHexBase32)
+            _ = try? encodeToBase32(text, alphabet: .extendedHexBase32)
         }
     }
 
     func test_performance_base32ZEncoding() {
         measure() {
-            _ = encodeToBase32(text, alphabet: .zBase32)
+            _ = try? encodeToBase32(text, alphabet: .zBase32)
         }
     }
+
+    // MARK: - Helper functions
+    private func decodeFromBase32String(_ input: String, alphabet: Base32Alphabet) throws -> String {
+        try decodeFromBase32(input, alphabet: alphabet)
+    }
+}
+
+public func XCTAssertThrowsError<T, E: Error & Equatable>(
+    _ expression: @autoclosure () throws -> T,
+    expectedError: E,
+    _ message: String = "",
+    file: StaticString = #file,
+    line: UInt = #line) {
+
+    XCTAssertThrowsError(try expression(), message, file: file, line: line, { (error) in
+        XCTAssertNotNil(error as? E, "\(error) is not \(E.self)", file: file, line: line)
+        XCTAssertEqual(error as? E, expectedError, file: file, line: line)
+    })
 }
