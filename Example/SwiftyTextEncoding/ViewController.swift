@@ -10,15 +10,40 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    private let viewLayout = ViewLayout()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        setupViewInteractions()
+        viewLayout.refresh()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func loadView() {
+        self.view = viewLayout
     }
-
 }
 
+extension ViewController {
+
+    private func setupViewInteractions() {
+        viewLayout.tabBar.addTarget(self, action: #selector(tabSelected), for: .valueChanged)
+        viewLayout.textInput.addTarget(self, action: #selector(textInputDidChange), for: .editingChanged)
+    }
+
+    private func clearAllData() {
+        viewLayout.textInput.text = ""
+        viewLayout.textOutput.text = ""
+    }
+}
+
+extension ViewController {
+
+    @objc private func tabSelected() {
+        clearAllData()
+    }
+
+    @objc private func textInputDidChange() {
+        viewLayout.refresh()
+    }
+}

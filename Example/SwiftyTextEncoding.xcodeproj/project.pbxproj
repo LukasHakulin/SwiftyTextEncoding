@@ -24,6 +24,7 @@
 		D3E5BAF225D8665000A4C2C0 /* ZBase32DecodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E5BAF125D8665000A4C2C0 /* ZBase32DecodingTests.swift */; };
 		D3E5BAF625D866FA00A4C2C0 /* WordSafeBase32EncodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E5BAF525D866FA00A4C2C0 /* WordSafeBase32EncodingTests.swift */; };
 		D3E5BAFA25D8670700A4C2C0 /* WordSafeBase32DecodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E5BAF925D8670700A4C2C0 /* WordSafeBase32DecodingTests.swift */; };
+		D3E5BAFE25D86BA600A4C2C0 /* ViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E5BAFD25D86BA600A4C2C0 /* ViewLayout.swift */; };
 		D83F4E189B567560374389E6 /* Pods_SwiftyTextEncoding_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BAB6EE1BDD8AAC7577DE8A8 /* Pods_SwiftyTextEncoding_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +67,7 @@
 		D3E5BAF125D8665000A4C2C0 /* ZBase32DecodingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZBase32DecodingTests.swift; sourceTree = "<group>"; };
 		D3E5BAF525D866FA00A4C2C0 /* WordSafeBase32EncodingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordSafeBase32EncodingTests.swift; sourceTree = "<group>"; };
 		D3E5BAF925D8670700A4C2C0 /* WordSafeBase32DecodingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordSafeBase32DecodingTests.swift; sourceTree = "<group>"; };
+		D3E5BAFD25D86BA600A4C2C0 /* ViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewLayout.swift; sourceTree = "<group>"; };
 		F993CFC02D927D3053B4B27A /* Pods-SwiftyTextEncoding_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyTextEncoding_Example.debug.xcconfig"; path = "Target Support Files/Pods-SwiftyTextEncoding_Example/Pods-SwiftyTextEncoding_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -126,9 +128,10 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
-				607FACD91AFB9204008FA782 /* Main.storyboard */,
+				D3E5BAFD25D86BA600A4C2C0 /* ViewLayout.swift */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
+				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
 			name = "Example for SwiftyTextEncoding";
@@ -360,6 +363,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3E5BAFE25D86BA600A4C2C0 /* ViewLayout.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
