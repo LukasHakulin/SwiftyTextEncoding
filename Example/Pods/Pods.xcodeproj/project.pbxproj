@@ -221,12 +221,12 @@
 		FCB29776B499EF5A3206AEC5E596252D /* SwiftyTextEncoding */ = {
 			isa = PBXGroup;
 			children = (
-				D3D6512125D0354400494869 /* CodingAlphabets.swift */,
 				1B5A04A960C27ECDA6B279ECA9FFD7C4 /* AuxiliaryDataTypeExtensions.swift */,
 				0E4FB1C78681B12437484A156D87CB1C /* Base16EncoderAndDecoder.swift */,
+				D3D6512E25D03AE100494869 /* Base32EncoderAndDecoder.swift */,
+				D3D6512125D0354400494869 /* CodingAlphabets.swift */,
 				841A07DAAF337A8B2183B46D315C1FD4 /* Pod */,
 				A543383D4886B81DD27456C724B27830 /* Support Files */,
-				D3D6512E25D03AE100494869 /* Base32EncoderAndDecoder.swift */,
 			);
 			name = SwiftyTextEncoding;
 			path = ../..;
