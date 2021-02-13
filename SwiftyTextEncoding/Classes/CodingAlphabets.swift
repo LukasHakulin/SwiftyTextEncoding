@@ -26,3 +26,10 @@ let extendedHexBase32Alphabet = ["0","1","2","3","4","5","6","7","8","9","A","B"
  * It also permutes the alphabet so that the easier characters are the ones that occur more frequently.
  */
 let zBase32Alphabet = ["y","b","n","d","r","f","g","8","e","j","k","m","c","p","q","x","o","t","1","u","w","i","s","z","a","3","4","5","h","7","6","9"]
+
+/*
+ * Word Safe alphabet uses 8 numeric digits and 12 case-insensitive letter digits
+ * chosen to avoid accidentally forming words.
+ * Treating the alphabet as case-sensitive produces a 32 (8+12+12) digit set.
+ */
+let wordSafeBase32Alphabet = ["2","3","4","5","6","7","8","9","C","F","G","H","J","M","P","Q","R","V","W","X","c","f","g","h","j","m","p","q","r","v","w","x"]

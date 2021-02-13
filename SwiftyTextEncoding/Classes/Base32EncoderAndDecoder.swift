@@ -24,7 +24,7 @@ public enum Base32DecodingError: Swift.Error, Equatable {
 }
 
 public enum Base32Alphabet {
-    case base32, extendedHexBase32, zBase32
+    case base32, extendedHexBase32, zBase32, wordSafeBase32
 }
 
 public func encodeToBase32(_ input: [UInt8], alphabet: Base32Alphabet = .base32) throws -> String? {
@@ -32,6 +32,7 @@ public func encodeToBase32(_ input: [UInt8], alphabet: Base32Alphabet = .base32)
     case .base32: return try encodeToBase32(input, alphabet: base32Alphabet)
     case .extendedHexBase32: return try encodeToBase32(input, alphabet: extendedHexBase32Alphabet)
     case .zBase32: return try encodeToBase32(input, alphabet: zBase32Alphabet)
+    case .wordSafeBase32: return try encodeToBase32(input, alphabet: wordSafeBase32Alphabet)
     }
 }
 
@@ -118,6 +119,7 @@ public func decodeFromBase32(_ input: String, alphabet: Base32Alphabet) throws -
     case .base32: return try decodeFromBase32(inputString, alphabet: base32Alphabet)
     case .extendedHexBase32: return try decodeFromBase32(inputString, alphabet: extendedHexBase32Alphabet)
     case .zBase32: return try decodeFromBase32(inputString, alphabet: zBase32Alphabet)
+    case .wordSafeBase32: return try decodeFromBase32(inputString, alphabet: wordSafeBase32Alphabet)
     }
 }
 
@@ -231,6 +233,14 @@ func isStringValid(_ input: String, alphabet: Base32Alphabet) -> Bool {
         guard
             input.range(
                 of: #"^(?:[a-km-uw-z3-9]{8})*(?:[a-km-uw-z3-9]{2}={6}|[a-km-uw-z3-9]{4}={4}|[a-km-uw-z3-9]{5}={3}|[a-km-uw-z3-9]{7}=)?$"#,
+                options: .regularExpression
+            ) != nil
+        else { return false }
+        return true
+    case .wordSafeBase32:
+        guard
+            input.range(
+                of: #"^(?:[CFGHJMPQRVWXcfghjmpqrvwx2-9]{8})*(?:[CFGHJMPQRVWXcfghjmpqrvwx2-9]{2}={6}|[CFGHJMPQRVWXcfghjmpqrvwx2-9]{4}={4}|[CFGHJMPQRVWXcfghjmpqrvwx2-9]{5}={3}|[CFGHJMPQRVWXcfghjmpqrvwx2-9]{7}=)?$"#,
                 options: .regularExpression
             ) != nil
         else { return false }
