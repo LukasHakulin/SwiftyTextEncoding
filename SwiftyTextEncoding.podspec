@@ -9,34 +9,21 @@
 Pod::Spec.new do |s|
   s.name             = 'SwiftyTextEncoding'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of SwiftyTextEncoding.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
+  s.summary          = 'Swift implementation of some older Text/Data Encoding algorithms: base16, base32, base32hex, z-base32, word-safe base32'
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+                        Swift implementation of some older Text/Data Encoding algorithms:
+                            base16, base32, base32hex, z-base32, word-safe base32.
+                        Implementation is focused on avoiding of crashes than algorithm effectivity.
                        DESC
 
-  s.homepage         = 'https://github.com/Lukas Hakulin/SwiftyTextEncoding'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.homepage         = 'https://github.com/LukasHakulin/SwiftyTextEncoding'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Lukas Hakulin' => 'lukas.hakulin@gmail.com' }
   s.source           = { :git => 'https://github.com/LukasHakulin/SwiftyTextEncoding.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.platform         = :ios, '10.0'
+  s.requires_arc     = true
 
-  s.ios.deployment_target = '9.0'
-
+  s.ios.deployment_target = '10.0'
+  s.swift_version = '5.0'
   s.source_files = 'SwiftyTextEncoding/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'SwiftyTextEncoding' => ['SwiftyTextEncoding/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end
