@@ -14,6 +14,7 @@ extension UInt8 {
 }
 
 extension Array where Element == UInt8 {
+    var data: Data { return Data(self) }
     var utf8String: String? { return String(bytes: self, encoding: .utf8) }
 
     mutating func popOrNil() -> UInt8? {

@@ -111,7 +111,7 @@ func encodeToBase32(_ input: String, alphabet: [String]) throws -> String? {
 
 // Interface
 
-public func decodeFromBase32(_ input: String, alphabet: Base32Alphabet) throws -> String {
+public func decodeFromBase32(_ input: String, alphabet: Base32Alphabet) throws -> Data {
     let inputString = convert(input: input, padding: numberOfLettersInBase32Group, paddingCharacter: pad)
     guard isStringValid(inputString, alphabet: alphabet) == true else { throw Base32DecodingError.unsuportedFormat }
 
@@ -123,8 +123,10 @@ public func decodeFromBase32(_ input: String, alphabet: Base32Alphabet) throws -
     }
 }
 
-public func decodeFromBase32(_ input: String, alphabet: Base32Alphabet) throws -> Data {
-    try decodeFromBase32(input, alphabet: alphabet).data
+public func decodeFromBase32(_ input: String, alphabet: Base32Alphabet) throws -> String {
+    let data = try decodeFromBase32(input, alphabet: alphabet) as Data
+    guard let string = data.utf8String else { throw Base32DecodingError.unexpectedInternalError }
+    return string
 }
 
 public func decodeFromBase32(_ input: String, alphabet: Base32Alphabet) throws -> [UInt8] {
@@ -133,8 +135,8 @@ public func decodeFromBase32(_ input: String, alphabet: Base32Alphabet) throws -
 
 // Implementation
 
-func decodeFromBase32(_ input: String, alphabet: [String]) throws -> String {
-    guard input.isEmpty == false else { return "" }
+func decodeFromBase32(_ input: String, alphabet: [String]) throws -> Data {
+    guard input.isEmpty == false else { return Data() }
     guard alphabet.count == 32 else { throw Base32DecodingError.noBase32Alphabet }
     let inputString = convert(input: input, padding: numberOfLettersInBase32Group, paddingCharacter: pad)
 
@@ -197,12 +199,11 @@ func decodeFromBase32(_ input: String, alphabet: [String]) throws -> String {
     default: break
     }
 
-    guard let resultString = result.utf8String else { throw Base32DecodingError.unexpectedInternalError }
-    return resultString
+    return result.data
 }
 
-func decodeFromBase32(_ input: String, alphabet: [String]) throws -> Data {
-    try decodeFromBase32(input, alphabet: alphabet).data
+func decodeFromBase32(_ input: String, alphabet: [String]) throws -> String {
+    try decodeFromBase32(input, alphabet: alphabet)
 }
 
 func decodeFromBase32(_ input: String, alphabet: [String]) throws -> [UInt8] {
