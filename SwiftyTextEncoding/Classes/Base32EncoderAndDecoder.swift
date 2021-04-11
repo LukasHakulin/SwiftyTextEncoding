@@ -19,7 +19,7 @@ let validPaddingLength: [Int] = [1, 3, 4, 6]
 
 public enum Base32DecodingError: Swift.Error, Equatable {
     case noBase32Alphabet
-    case unsuportedFormat
+    case unsupportedFormat
     case unexpectedInternalError
 }
 
@@ -113,7 +113,7 @@ func encodeToBase32(_ input: String, alphabet: [String]) throws -> String {
 
 public func decodeFromBase32(_ input: String, alphabet: Base32Alphabet) throws -> Data {
     let inputString = convert(input: input, padding: numberOfLettersInBase32Group, paddingCharacter: pad)
-    guard isStringValid(inputString, alphabet: alphabet) == true else { throw Base32DecodingError.unsuportedFormat }
+    guard isStringValid(inputString, alphabet: alphabet) == true else { throw Base32DecodingError.unsupportedFormat }
 
     switch alphabet {
     case .base32: return try decodeFromBase32(inputString, alphabet: base32Alphabet)
@@ -148,7 +148,7 @@ func decodeFromBase32(_ input: String, alphabet: [String]) throws -> Data {
     if let index = pad.bytes.first, let firstIndexOfPad = base32encodedString.firstIndex(of: index) {
         leastPaddingLength = base32encodedString.suffix(from: firstIndexOfPad).count
         guard validPaddingLength.contains(leastPaddingLength) == true
-        else { throw Base32DecodingError.unsuportedFormat }
+        else { throw Base32DecodingError.unsupportedFormat }
     }
     base32encodedString = Array(base32encodedString.dropLast(leastPaddingLength))
 

@@ -48,34 +48,34 @@ class ExtendedHexBase32DecodingTests: XCTestCase {
     func test_isThrowingError_wrongAlphabet_base32Decoding_extendedHexBase32Alphabet() {
         XCTAssertThrowsError(
             try decodeFromBase32String("WA======", alphabet: .extendedHexBase32),
-            expectedError: Base32DecodingError.unsuportedFormat
+            expectedError: Base32DecodingError.unsupportedFormat
         )
         XCTAssertThrowsError(
             try decodeFromBase32String("XA======", alphabet: .extendedHexBase32),
-            expectedError: Base32DecodingError.unsuportedFormat
+            expectedError: Base32DecodingError.unsupportedFormat
         )
         XCTAssertThrowsError(
             try decodeFromBase32String("YA======", alphabet: .extendedHexBase32),
-            expectedError: Base32DecodingError.unsuportedFormat
+            expectedError: Base32DecodingError.unsupportedFormat
         )
         XCTAssertThrowsError(
             try decodeFromBase32String("ZA======", alphabet: .extendedHexBase32),
-            expectedError: Base32DecodingError.unsuportedFormat
+            expectedError: Base32DecodingError.unsupportedFormat
         )
     }
 
     func test_isThrowingError_wrongPadding_base32Decoding_extendedHexBase32Alphabet() {
         XCTAssertThrowsError(
             try decodeFromBase32String("A======", alphabet: .extendedHexBase32),
-            expectedError: Base32DecodingError.unsuportedFormat
+            expectedError: Base32DecodingError.unsupportedFormat
         )
         XCTAssertThrowsError(
             try decodeFromBase32String("AAA====", alphabet: .extendedHexBase32),
-            expectedError: Base32DecodingError.unsuportedFormat
+            expectedError: Base32DecodingError.unsupportedFormat
         )
         XCTAssertThrowsError(
             try decodeFromBase32String("AAAAAA=", alphabet: .extendedHexBase32),
-            expectedError: Base32DecodingError.unsuportedFormat
+            expectedError: Base32DecodingError.unsupportedFormat
         )
     }
 }

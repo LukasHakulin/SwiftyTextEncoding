@@ -48,34 +48,34 @@ class Base32DecodingTests: XCTestCase {
     func test_isThrowingError_wrongAlphabet_base32Decoding_base32Alphabet() {
         XCTAssertThrowsError(
             try decodeFromBase32String("0A======", alphabet: .base32),
-            expectedError: Base32DecodingError.unsuportedFormat
+            expectedError: Base32DecodingError.unsupportedFormat
         )
         XCTAssertThrowsError(
             try decodeFromBase32String("1A======", alphabet: .base32),
-            expectedError: Base32DecodingError.unsuportedFormat
+            expectedError: Base32DecodingError.unsupportedFormat
         )
         XCTAssertThrowsError(
             try decodeFromBase32String("8A======", alphabet: .base32),
-            expectedError: Base32DecodingError.unsuportedFormat
+            expectedError: Base32DecodingError.unsupportedFormat
         )
         XCTAssertThrowsError(
             try decodeFromBase32String("9A======", alphabet: .base32),
-            expectedError: Base32DecodingError.unsuportedFormat
+            expectedError: Base32DecodingError.unsupportedFormat
         )
     }
 
     func test_isThrowingError_wrongPadding_base32Decoding_base32Alphabet() {
         XCTAssertThrowsError(
             try decodeFromBase32String("A======", alphabet: .base32),
-            expectedError: Base32DecodingError.unsuportedFormat
+            expectedError: Base32DecodingError.unsupportedFormat
         )
         XCTAssertThrowsError(
             try decodeFromBase32String("AAA====", alphabet: .base32),
-            expectedError: Base32DecodingError.unsuportedFormat
+            expectedError: Base32DecodingError.unsupportedFormat
         )
         XCTAssertThrowsError(
             try decodeFromBase32String("AAAAAA=", alphabet: .base32),
-            expectedError: Base32DecodingError.unsuportedFormat
+            expectedError: Base32DecodingError.unsupportedFormat
         )
     }
 }

@@ -47,30 +47,30 @@ class ZBase32DecodingTests: XCTestCase {
     func test_isThrowingError_wrongAlphabet_base32Decoding_zBase32Alphabet() {
         XCTAssertThrowsError(
             try decodeFromBase32String("la======", alphabet: .zBase32),
-            expectedError: Base32DecodingError.unsuportedFormat
+            expectedError: Base32DecodingError.unsupportedFormat
         )
         XCTAssertThrowsError(
             try decodeFromBase32String("va======", alphabet: .zBase32),
-            expectedError: Base32DecodingError.unsuportedFormat
+            expectedError: Base32DecodingError.unsupportedFormat
         )
         XCTAssertThrowsError(
             try decodeFromBase32String("2a======", alphabet: .zBase32),
-            expectedError: Base32DecodingError.unsuportedFormat
+            expectedError: Base32DecodingError.unsupportedFormat
         )
     }
 
     func test_isThrowingError_wrongPadding_base32Decoding_zBase32Alphabet() {
         XCTAssertThrowsError(
             try decodeFromBase32String("a======", alphabet: .zBase32),
-            expectedError: Base32DecodingError.unsuportedFormat
+            expectedError: Base32DecodingError.unsupportedFormat
         )
         XCTAssertThrowsError(
             try decodeFromBase32String("aaa====", alphabet: .zBase32),
-            expectedError: Base32DecodingError.unsuportedFormat
+            expectedError: Base32DecodingError.unsupportedFormat
         )
         XCTAssertThrowsError(
             try decodeFromBase32String("aaaaaa=", alphabet: .zBase32),
-            expectedError: Base32DecodingError.unsuportedFormat
+            expectedError: Base32DecodingError.unsupportedFormat
         )
     }
 }
