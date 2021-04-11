@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SwiftyTextEncoding'
-  s.version          = '1.0.0'
+  s.version          = '1.0.1'
   s.summary          = 'Swift implementation of some older Text/Data Encoding algorithms: base16, base32, base32hex, z-base32, word-safe base32'
   s.description      = <<-DESC
                         Swift implementation of some older Text/Data Encoding algorithms:
