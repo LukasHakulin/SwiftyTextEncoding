@@ -27,7 +27,7 @@ public enum Base32Alphabet {
     case base32, extendedHexBase32, zBase32, wordSafeBase32
 }
 
-public func encodeToBase32(_ input: [UInt8], alphabet: Base32Alphabet = .base32) throws -> String? {
+public func encodeToBase32(_ input: [UInt8], alphabet: Base32Alphabet = .base32) throws -> String {
     switch alphabet {
     case .base32: return try encodeToBase32(input, alphabet: base32Alphabet)
     case .extendedHexBase32: return try encodeToBase32(input, alphabet: extendedHexBase32Alphabet)
@@ -36,17 +36,17 @@ public func encodeToBase32(_ input: [UInt8], alphabet: Base32Alphabet = .base32)
     }
 }
 
-public func encodeToBase32(_ input: Data, alphabet: Base32Alphabet = .base32) throws -> String? {
+public func encodeToBase32(_ input: Data, alphabet: Base32Alphabet = .base32) throws -> String {
     try encodeToBase32(input.bytes, alphabet: alphabet)
 }
 
-public func encodeToBase32(_ input: String, alphabet: Base32Alphabet = .base32) throws -> String? {
+public func encodeToBase32(_ input: String, alphabet: Base32Alphabet = .base32) throws -> String {
     try encodeToBase32(input.bytes, alphabet: alphabet)
 }
 
 // Implementation
 
-func encodeToBase32(_ input: [UInt8], alphabet: [String]) throws -> String? {
+func encodeToBase32(_ input: [UInt8], alphabet: [String]) throws -> String {
     guard alphabet.count == 32 else { throw Base32DecodingError.noBase32Alphabet }
     var inputSequence: [UInt8] = input
     var result: [String] = []
@@ -99,11 +99,11 @@ func encodeToBase32(_ input: [UInt8], alphabet: [String]) throws -> String? {
     return result.joined()
 }
 
-func encodeToBase32(_ input: Data, alphabet: [String]) throws -> String? {
+func encodeToBase32(_ input: Data, alphabet: [String]) throws -> String {
     try encodeToBase32(input.bytes, alphabet: alphabet)
 }
 
-func encodeToBase32(_ input: String, alphabet: [String]) throws -> String? {
+func encodeToBase32(_ input: String, alphabet: [String]) throws -> String {
     try encodeToBase32(input.bytes, alphabet: alphabet)
 }
 
